@@ -67,6 +67,7 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
     let x: number;
     let y: number;
     
+    counter = 0
     let point = []
     while (true) {
         counter += 1

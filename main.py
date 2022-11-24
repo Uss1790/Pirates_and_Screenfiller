@@ -68,6 +68,7 @@ input.on_button_pressed(Button.A, on_button_pressed_a)
 
 def on_button_pressed_b():
     global counter
+    counter = 0
     point = []
     while True:
         counter += 1
