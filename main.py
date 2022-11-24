@@ -64,11 +64,12 @@ input.on_button_pressed(Button.A, on_button_pressed_a)
 
 def on_button_pressed_b():
     global counter
+    point = []
     while True:
         counter += 1
         x = int(Math.random() * 5)
         y = int(Math.random() * 5)
-        if point.index(x + y / 10) < 0:
+        if (x + y / 10) not in point:
             basic.pause(100)
             led.plot(x, y)
             point.append(x + y / 10)
@@ -78,7 +79,6 @@ def on_button_pressed_b():
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
 counter = 0
-point = []
 
 def on_forever():
     pass

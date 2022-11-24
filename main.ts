@@ -65,11 +65,12 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
     let x: number;
     let y: number;
     
+    let point = []
     while (true) {
         counter += 1
         x = Math.trunc(Math.random() * 5)
         y = Math.trunc(Math.random() * 5)
-        if (_py.py_array_index(point, x + y / 10) < 0) {
+        if (point.indexOf(x + y / 10) < 0) {
             basic.pause(100)
             led.plot(x, y)
             point.push(x + y / 10)
@@ -83,7 +84,6 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
     }
 })
 let counter = 0
-let point = []
 basic.forever(function on_forever() {
     
 })
