@@ -1,5 +1,3 @@
-counter = 0
-
 def on_button_pressed_a():
     music.set_tempo(45)
     music.play_tone(294, music.beat(BeatFraction.EIGHTH))
@@ -67,7 +65,6 @@ input.on_button_pressed(Button.A, on_button_pressed_a)
 def on_button_pressed_b():
     global counter
     while True:
-        point: List[number] = []
         counter += 1
         x = int(Math.random() * 5)
         y = int(Math.random() * 5)
@@ -79,6 +76,9 @@ def on_button_pressed_b():
             basic.show_number(counter)
             break
 input.on_button_pressed(Button.B, on_button_pressed_b)
+
+counter = 0
+point = []
 
 def on_forever():
     pass

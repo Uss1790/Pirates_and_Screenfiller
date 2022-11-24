@@ -1,4 +1,3 @@
-let counter = 0
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
     music.setTempo(45)
     music.playTone(294, music.beat(BeatFraction.Eighth))
@@ -63,12 +62,10 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     music.playTone(392, music.beat(BeatFraction.Half))
 })
 input.onButtonPressed(Button.B, function on_button_pressed_b() {
-    let point: number[];
     let x: number;
     let y: number;
     
     while (true) {
-        point : number[] = []
         counter += 1
         x = Math.trunc(Math.random() * 5)
         y = Math.trunc(Math.random() * 5)
@@ -85,6 +82,8 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
         
     }
 })
+let counter = 0
+let point = []
 basic.forever(function on_forever() {
     
 })
