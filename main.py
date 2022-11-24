@@ -1,3 +1,7 @@
+counter = 0
+
+point = []
+
 def on_button_pressed_a():
     music.set_tempo(45)
     music.play_tone(294, music.beat(BeatFraction.EIGHTH))
@@ -77,8 +81,6 @@ def on_button_pressed_b():
             basic.show_number(counter)
             break
 input.on_button_pressed(Button.B, on_button_pressed_b)
-
-counter = 0
 
 def on_forever():
     pass

@@ -1,3 +1,5 @@
+let counter = 0
+let point = []
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
     music.setTempo(45)
     music.playTone(294, music.beat(BeatFraction.Eighth))
@@ -83,7 +85,6 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
         
     }
 })
-let counter = 0
 basic.forever(function on_forever() {
     
 })
